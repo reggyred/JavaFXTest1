@@ -5,11 +5,11 @@ import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
-import com.fxgraph.graph.CellType;
-import com.fxgraph.graph.Graph;
-import com.fxgraph.graph.Model;
-import com.fxgraph.layout.base.Layout;
-import com.fxgraph.layout.random.RandomLayout;
+import pl.sii.graph.CellType;
+import pl.sii.graph.Graph;
+import pl.sii.graph.Model;
+import pl.sii.layout.base.Layout;
+import pl.sii.layout.random.RandomLayout;
 
 public class Main extends Application {
 
