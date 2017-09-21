@@ -108,6 +108,23 @@ public class Model {
             throw new UnsupportedOperationException("Unsupported type: " + type);
         }
     }
+    
+    public void addCell(int id, CellType type, int cellLayer, int cellOrder) {
+
+        switch (type) {
+
+        case RECTANGLE:
+            RectangleCell rectangleCell = new RectangleCell(id, cellLayer, cellOrder);
+            addCell(rectangleCell);
+            break;
+
+       	
+        	
+        default:
+            throw new UnsupportedOperationException("Unsupported type: " + type);
+        }
+    }
+
 
     private void addCell( Cell cell) {
 

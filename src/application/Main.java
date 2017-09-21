@@ -22,6 +22,7 @@ import pl.sii.graph.CellType;
 import pl.sii.graph.Graph;
 import pl.sii.graph.Model;
 import pl.sii.layout.base.Layout;
+import pl.sii.layout.basic.BasicLayout;
 import pl.sii.layout.random.RandomLayout;
 
 public class Main extends Application {
@@ -86,7 +87,7 @@ public class Main extends Application {
 		layout.execute();
 		Layout layout2 = new RandomLayout(graph2);
 		layout2.execute();
-		Layout layout3 = new RandomLayout(graph3);
+		Layout layout3 = new BasicLayout(graph3);
 		layout3.execute();
 
 	}
@@ -182,22 +183,23 @@ public class Main extends Application {
 
 		graph3.beginUpdate();
 
-		model3.addCell(1, CellType.TITLEDPANE);
-		model3.addCell(2, CellType.RECTANGLE);
-		model3.addCell(3, CellType.RECTANGLE);
-		model3.addCell(4, CellType.TRIANGLE);
-		model3.addCell(5, CellType.TRIANGLE);
-		model3.addCell(6, CellType.RECTANGLE);
-		model3.addCell(7, CellType.RECTANGLE);
-		model3.addCell(8, CellType.LABEL);
-		model3.addCell(9, CellType.CIRCLE);
-		model3.addCell(10, CellType.TITLEDPANE);
-		model3.addCell(11, CellType.TITLEDPANE);
+		model3.addCell(0, CellType.RECTANGLE, 0, 0);
+		model3.addCell(1, CellType.RECTANGLE, 1, 0);
+		model3.addCell(2, CellType.RECTANGLE, 1, 1);
+		model3.addCell(3, CellType.RECTANGLE, 2, 0);
+		model3.addCell(4, CellType.RECTANGLE, 2, 1);
+		model3.addCell(5, CellType.RECTANGLE, 2, 2);
+		model3.addCell(6, CellType.RECTANGLE, 2, 3);
+		model3.addCell(7, CellType.RECTANGLE, 3, 0);
+		model3.addCell(8, CellType.RECTANGLE, 3, 1);
+		model3.addCell(9, CellType.RECTANGLE, 4, 0);
+		model3.addCell(10, CellType.RECTANGLE, 5, 0);
+		model3.addCell(11, CellType.RECTANGLE, 5, 1);
 
-		model3.addEdge(1, 2);
-		model3.addEdge(3, 4);
-		model3.addEdge(2, 5);
-		model3.addEdge(2, 6);
+		model3.addEdge(0, 1);
+		model3.addEdge(0, 2);
+		model3.addEdge(2, 3);
+		model3.addEdge(2, 3);
 		model3.addEdge(3, 4);
 		model3.addEdge(4, 7);
 		model3.addEdge(4, 8);

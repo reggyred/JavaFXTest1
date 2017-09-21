@@ -5,6 +5,7 @@ import java.util.List;
 
 import javafx.geometry.Point2D;
 import javafx.scene.Node;
+import javafx.scene.control.Label;
 import javafx.scene.layout.Pane;
 
 public class Cell extends Pane {
@@ -30,6 +31,7 @@ public class Cell extends Pane {
 		this.cellId = cellId;
 		this.cellLayer = cellLayer;
 		this.cellOrder = cellOrder;
+		this.getChildren().addAll(new Label(Integer.toString(cellId)));
 	}
 
 	public void addCellChild(Cell cell) {

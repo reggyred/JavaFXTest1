@@ -19,8 +19,8 @@ public class BasicLayout extends Layout {
 	int maxLayer;
 	int maxWidth;
 	int maxHeight;
-	final int layerHeight = 60;
-	final int orderWidth = 60;
+	final int layerHeight = 75;
+	final int orderWidth = 75;
 	int[] ordersInLayers;
 
 	public BasicLayout(Graph graph) {
@@ -39,22 +39,33 @@ public class BasicLayout extends Layout {
 
 			if (cell.getLayer() > maxLayer) {
 				maxLayer = cell.getLayer();
-				ordersInLayers = new int[maxLayer];
+				
 			}
 			if (cell.getOrder() > maxOrder) {
 				maxOrder = cell.getOrder();
 			}
 
 		}
-		
+		ordersInLayers = new int[maxLayer+1];
 		for (Cell cell : cells) {
 			ordersInLayers[cell.getLayer()]++;
 		}
 
-		maxWidth = maxOrder * orderWidth;
-		maxHeight = maxLayer * layerHeight;
-		// cell.relocate(x, y);
+		maxWidth = maxOrder * orderWidth + 80;
+		maxHeight = maxLayer * layerHeight + 50;
+		
 
+		for (Cell cell : cells) {
+			int x;
+			int y;
+			int cellLayer = cell.getLayer();
+			y = maxHeight - 25 - cellLayer*75;
+			x = maxWidth / (ordersInLayers[cellLayer]+1)*(cell.getOrder()+1);
+			
+			cell.relocate(x, y);
+		}
+		
+		
 	}
 
 }
