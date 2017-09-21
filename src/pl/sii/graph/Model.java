@@ -24,11 +24,11 @@ public class Model {
     List<Edge> addedEdges;
     List<Edge> removedEdges;
 
-    Map<String,Cell> cellMap; // <id,cell>
+    Map<Integer,Cell> cellMap; // <id,cell>
 
     public Model() {
 
-         graphParent = new Cell( "_ROOT_");
+         graphParent = new Cell(0);
 
          // clear model, create lists
          clear();
@@ -77,7 +77,7 @@ public class Model {
         return allEdges;
     }
 
-    public void addCell(String id, CellType type) {
+    public void addCell(int id, CellType type) {
 
         switch (type) {
 
@@ -117,7 +117,7 @@ public class Model {
 
     }
 
-    public void addEdge( String sourceId, String targetId) {
+    public void addEdge( int sourceId, int targetId) {
 
         Cell sourceCell = cellMap.get( sourceId);
         Cell targetCell = cellMap.get( targetId);

@@ -8,7 +8,7 @@ import pl.sii.graph.Cell;
 
 public class TitledPaneCell extends Cell {
 
-    public TitledPaneCell(String id, String header, Node content) {
+    public TitledPaneCell(int id, String header, Node content) {
         super(id);
 
         TitledPane view = new TitledPane(header, content);

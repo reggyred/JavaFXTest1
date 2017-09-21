@@ -6,10 +6,10 @@ import pl.sii.graph.Cell;
 
 public class LabelCell extends Cell {
 
-    public LabelCell(String id) {
+    public LabelCell(int id) {
         super(id);
 
-        Label view = new Label(id);
+        Label view = new Label(Integer.toString(id));
 
         setView(view);
 

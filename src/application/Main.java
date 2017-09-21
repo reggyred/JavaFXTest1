@@ -97,29 +97,29 @@ public class Main extends Application {
 
 		graph.beginUpdate();
 
-		model.addCell("Cell A", CellType.TITLEDPANE);
-		model.addCell("Cell B", CellType.RECTANGLE);
-		model.addCell("Cell C", CellType.RECTANGLE);
-		model.addCell("Cell D", CellType.TRIANGLE);
-		model.addCell("Cell E", CellType.TRIANGLE);
-		model.addCell("Cell F", CellType.RECTANGLE);
-		model.addCell("Cell G", CellType.RECTANGLE);
-		model.addCell("Cell H", CellType.LABEL);
-		model.addCell("Cell I", CellType.CIRCLE);
-		model.addCell("Cell J", CellType.TITLEDPANE);
-		model.addCell("Cell K", CellType.TITLEDPANE);
+		model.addCell(1, CellType.TITLEDPANE);
+		model.addCell(2, CellType.RECTANGLE);
+		model.addCell(3, CellType.RECTANGLE);
+		model.addCell(4, CellType.TRIANGLE);
+		model.addCell(5, CellType.TRIANGLE);
+		model.addCell(6, CellType.RECTANGLE);
+		model.addCell(7, CellType.RECTANGLE);
+		model.addCell(8, CellType.LABEL);
+		model.addCell(9, CellType.CIRCLE);
+		model.addCell(10, CellType.TITLEDPANE);
+		model.addCell(11, CellType.TITLEDPANE);
 
-		model.addEdge("Cell A", "Cell B");
-		model.addEdge("Cell A", "Cell C");
-		model.addEdge("Cell B", "Cell C");
-		model.addEdge("Cell C", "Cell D");
-		model.addEdge("Cell B", "Cell E");
-		model.addEdge("Cell D", "Cell F");
-		model.addEdge("Cell D", "Cell G");
-		model.addEdge("Cell G", "Cell H");
-		model.addEdge("Cell H", "Cell I");
-		model.addEdge("Cell I", "Cell J");
-		model.addEdge("Cell K", "Cell H");
+		model.addEdge(1, 2);
+		model.addEdge(3, 4);
+		model.addEdge(2, 5);
+		model.addEdge(2, 6);
+		model.addEdge(3, 4);
+		model.addEdge(4, 7);
+		model.addEdge(4, 8);
+		model.addEdge(8, 9);
+		model.addEdge(9, 10);
+		model.addEdge(10, 11);
+		model.addEdge(9, 11);
 
 		graph.endUpdate();
 
@@ -132,10 +132,10 @@ public class Main extends Application {
 		graph.beginUpdate();
 
 		for (int i = 0; i < 50; i++) {
-			model.addCell(String.valueOf(i), CellType.RECTANGLE);
+			model.addCell((i), CellType.RECTANGLE);
 		}
 		for (int i = 1; i < 50; i++) {
-			model.addEdge(String.valueOf(i - 1), String.valueOf(i));
+			model.addEdge((i - 1), (i));
 		}
 
 		graph.endUpdate();
@@ -148,29 +148,29 @@ public class Main extends Application {
 
 		graph2.beginUpdate();
 
-		model2.addCell("Cell A", CellType.RECTANGLE);
-		model2.addCell("Cell B", CellType.RECTANGLE);
-		model2.addCell("Cell C", CellType.RECTANGLE);
-		model2.addCell("Cell D", CellType.TRIANGLE);
-		model2.addCell("Cell E", CellType.TRIANGLE);
-		model2.addCell("Cell F", CellType.RECTANGLE);
-		model2.addCell("Cell G", CellType.RECTANGLE);
-		model2.addCell("Cell H", CellType.LABEL);
-		model2.addCell("Cell I", CellType.RECTANGLE);
-		model2.addCell("Cell J", CellType.RECTANGLE);
-		model2.addCell("Cell K", CellType.RECTANGLE);
+		model2.addCell(1, CellType.TITLEDPANE);
+		model2.addCell(2, CellType.RECTANGLE);
+		model2.addCell(3, CellType.RECTANGLE);
+		model2.addCell(4, CellType.TRIANGLE);
+		model2.addCell(5, CellType.TRIANGLE);
+		model2.addCell(6, CellType.RECTANGLE);
+		model2.addCell(7, CellType.RECTANGLE);
+		model2.addCell(8, CellType.LABEL);
+		model2.addCell(9, CellType.CIRCLE);
+		model2.addCell(10, CellType.TITLEDPANE);
+		model2.addCell(11, CellType.TITLEDPANE);
 
-		model2.addEdge("Cell A", "Cell B");
-		model2.addEdge("Cell A", "Cell C");
-		model2.addEdge("Cell B", "Cell C");
-		model2.addEdge("Cell C", "Cell D");
-		model2.addEdge("Cell B", "Cell E");
-		model2.addEdge("Cell D", "Cell F");
-		model2.addEdge("Cell D", "Cell G");
-		model2.addEdge("Cell G", "Cell H");
-		model2.addEdge("Cell H", "Cell I");
-		model2.addEdge("Cell I", "Cell J");
-		model2.addEdge("Cell K", "Cell H");
+		model2.addEdge(1, 2);
+		model2.addEdge(3, 4);
+		model2.addEdge(2, 5);
+		model2.addEdge(2, 6);
+		model2.addEdge(3, 4);
+		model2.addEdge(4, 7);
+		model2.addEdge(4, 8);
+		model2.addEdge(8, 9);
+		model2.addEdge(9, 10);
+		model2.addEdge(10, 11);
+		model2.addEdge(9, 11);
 
 		graph2.endUpdate();
 
@@ -182,29 +182,29 @@ public class Main extends Application {
 
 		graph3.beginUpdate();
 
-		model3.addCell("Cell A", CellType.RECTANGLE);
-		model3.addCell("Cell B", CellType.RECTANGLE);
-		model3.addCell("Cell C", CellType.RECTANGLE);
-		model3.addCell("Cell D", CellType.TRIANGLE);
-		model3.addCell("Cell E", CellType.TRIANGLE);
-		model3.addCell("Cell F", CellType.RECTANGLE);
-		model3.addCell("Cell G", CellType.RECTANGLE);
-		model3.addCell("Cell H", CellType.LABEL);
-		model3.addCell("Cell I", CellType.RECTANGLE);
-		model3.addCell("Cell J", CellType.RECTANGLE);
-		model3.addCell("Cell K", CellType.RECTANGLE);
+		model3.addCell(1, CellType.TITLEDPANE);
+		model3.addCell(2, CellType.RECTANGLE);
+		model3.addCell(3, CellType.RECTANGLE);
+		model3.addCell(4, CellType.TRIANGLE);
+		model3.addCell(5, CellType.TRIANGLE);
+		model3.addCell(6, CellType.RECTANGLE);
+		model3.addCell(7, CellType.RECTANGLE);
+		model3.addCell(8, CellType.LABEL);
+		model3.addCell(9, CellType.CIRCLE);
+		model3.addCell(10, CellType.TITLEDPANE);
+		model3.addCell(11, CellType.TITLEDPANE);
 
-		model3.addEdge("Cell A", "Cell B");
-		model3.addEdge("Cell A", "Cell C");
-		model3.addEdge("Cell B", "Cell C");
-		model3.addEdge("Cell C", "Cell D");
-		model3.addEdge("Cell B", "Cell E");
-		model3.addEdge("Cell D", "Cell F");
-		model3.addEdge("Cell D", "Cell G");
-		model3.addEdge("Cell G", "Cell H");
-		model3.addEdge("Cell H", "Cell I");
-		model3.addEdge("Cell I", "Cell J");
-		model3.addEdge("Cell K", "Cell H");
+		model3.addEdge(1, 2);
+		model3.addEdge(3, 4);
+		model3.addEdge(2, 5);
+		model3.addEdge(2, 6);
+		model3.addEdge(3, 4);
+		model3.addEdge(4, 7);
+		model3.addEdge(4, 8);
+		model3.addEdge(8, 9);
+		model3.addEdge(9, 10);
+		model3.addEdge(10, 11);
+		model3.addEdge(9, 11);
 
 		graph3.endUpdate();
 

@@ -7,7 +7,7 @@ import pl.sii.graph.Cell;
 
 public class CircleCell extends Cell {
 
-	public CircleCell(String id) {
+	public CircleCell(int id) {
 		super(id);
 		
 		double radius = 35;

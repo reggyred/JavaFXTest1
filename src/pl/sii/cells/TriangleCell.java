@@ -7,7 +7,7 @@ import pl.sii.graph.Cell;
 
 public class TriangleCell extends Cell {
 
-    public TriangleCell( String id) {
+    public TriangleCell( int id) {
         super( id);
 
         double width = 50;
