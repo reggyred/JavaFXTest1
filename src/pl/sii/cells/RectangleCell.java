@@ -8,7 +8,7 @@ import pl.sii.graph.Cell;
 public class RectangleCell extends Cell {
 
     public RectangleCell( int id) {
-        super( id);
+        super(id);
 
         Rectangle view = new Rectangle( 50,50);
 
